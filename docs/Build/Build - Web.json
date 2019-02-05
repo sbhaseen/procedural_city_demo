@@ -1,0 +1,13 @@
+{
+"companyName": "iSquare Logix",
+"productName": "A Procedural City Demo",
+"dataUrl": "Build - Web.data.unityweb",
+"wasmCodeUrl": "Build - Web.wasm.code.unityweb",
+"wasmFrameworkUrl": "Build - Web.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#2B2B2B",
+"cacheControl": {"default": "must-revalidate"}
+}
