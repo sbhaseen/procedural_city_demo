@@ -6,20 +6,74 @@
     <title>Unity WebGL Player | A Procedural City Demo</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>  
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Build - Web.json", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark-blue">
+        <a class="navbar-brand" href="https://github.com/sbhaseen"><i class="fab fa-github"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center order-2" id="navbarCollapse">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://sbhaseen.github.io/index">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://sbhaseen.github.io/index#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://sbhaseen.github.io/index#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://sbhaseen.github.io/blog">Projects</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="webgl-content" style="top:30em;">
+      <div id="gameContainer"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
         <div class="title">A Procedural City Demo</div>
       </div>
+      <div class="container">
+        <p>
+          <b>See the GitHub project page <a href="https://github.com/sbhaseen/procedural_city_demo">here</a></b>
+        </p>
+        &nbsp
+        <p>
+          <b>Credits for the 3D models:</b>
+          <ul>
+            <li>Buildings/trees from <a href="https://assetstore.unity.com/packages/3d/poly-city-free-cartoon-pack-95242">Poly City - Free Cartoon Pack</a> by <a href="https://assetstore.unity.com/publishers/26567">Wand and Circles</a></li>
+            <li>Roads from <a href="https://assetstore.unity.com/packages/3d/environments/urban/low-poly-street-pack-67475">Low Poly Street Pack</a> by <a href="https://assetstore.unity.com/publishers/21977">Dynamic Art</a></li>
+          </ul>
+        </p>
+      </div>
     </div>
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
   </body>
 </html>

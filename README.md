@@ -1,6 +1,8 @@
 # A Procedural City Demo
 A procedural generation demo of a city in Unity.
 
+Read the blog post for more details [here](https://sbhaseen.github.io/2018/11/26/Procedural_game_basics.html).
+
 Some essential references from the Unity documentation:
 - [Instantiating Prefabs](https://docs.unity3d.com/Manual/InstantiatingPrefabs.html)
 - [Game Objects](https://docs.unity3d.com/ScriptReference/GameObject.html)
