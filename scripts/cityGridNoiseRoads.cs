@@ -32,7 +32,7 @@ public class cityGridNoiseRoads : MonoBehaviour
                 wRand = w + Random.Range(0, 3);
                 hRand = h + Random.Range(0, 3);
                 
-                // Generate the Perlin Noise value for a point on the gid
+                // Generate the Perlin Noise value for a point on the grid
                 cityGrid[w, h] = (int)(Mathf.PerlinNoise(wRand / 10.0f, hRand / 10.0f) * 10);
             }
         }
