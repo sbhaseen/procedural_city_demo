@@ -149,5 +149,5 @@ figcaption {
   caption-side: bottom;
 }
 
-#gameContainer { width: 80vw; height: 60vh; }
+#gameContainer { width: 60vw; height: 60vh; }
 canvas { width: 100%; height: 100%;}
