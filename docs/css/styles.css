@@ -1,0 +1,165 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  background-color: black;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 0.5em;
+  z-index: 100;
+}
+
+.navbar-brand {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+}
+
+.navbar-brand::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  transform: scale(0);
+  transform-origin: left;
+  transition: transform 200ms ease-in-out;
+}
+
+.navbar-brand:hover::after,
+.navbar-brand:focus::after {
+  transform: scale(1);
+}
+
+.navbar-toggler {
+  cursor: pointer;
+  padding: 0.5em;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  color: black;
+}
+
+.navbar-menu {
+  background-color: inherit;
+  color: inherit;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: none;
+}
+
+.is-active {
+  display: block;
+}
+
+.navbar-menu-list {
+  list-style: none;
+  padding: 0.5em;
+}
+
+.navbar-menu-list-item {
+  cursor: pointer;
+  padding: 0.5em;
+  transition-property: background-color, color;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+
+.navbar-menu-list-item:hover,
+.navbar-menu-list-item:focus {
+  background-color: turquoise;
+  color: black;
+}
+
+.navbar-menu-list-item-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.25rem;
+}
+
+.text-container {
+  max-width: 75ch;
+  margin: 0 auto;
+}
+
+/* Unity Player Container Styles */
+
+.webgl-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.webgl-content .footer {
+  padding: 0.25em 0;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.webgl-content .footer > .fullscreen {
+  align-self: flex-end;
+}
+
+#gameContainer {
+  max-width: 1920px;
+  width: 60vw;
+  max-height: 1080px;
+  height: 70vh;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .navbar {
+    padding: 1em 10vw;
+  }
+
+  .navbar-menu {
+    position: static;
+    display: block;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+
+  .navbar-menu-list {
+    display: flex;
+  }
+
+  .navbar-menu-list-item:not(:last-child) {
+    margin-right: 1em;
+  }
+}
